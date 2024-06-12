@@ -20,27 +20,28 @@ The original ESP32 S3 Box has been discontinued.
 There is a similar project for the M5Stack Dial (also known as M5Dial) at
 https://github.com/esp32beans/M5Stack_Touch_USB_Joystick.
 
+Note: Jun 11, 2024 Update to work with arduino-esp32 v3.0.
+
 ## Dependencies
 
 The install the following libraries using the Arduino IDE Library manager.
 
 * "ESP32_IO_Expander" by espressif
+* "ESP32_Display_Panel" by espressif
 
-Install the following library by downloading a .ZIP file then install it using
-the Arduino IDE "Add .ZIP Library" option. This is the same as the
-"ESP32_Display_Panel" library by espressif but patched to default the backlight
-off. If the original "ESP32 Display Panel" library is used, the backlight
-defaults on so the ESP32 S3 Box will not work on the XAC because the backlight
-draws too much current.
+The following library should not be used because the latest version works
+without patches.
 
 * https://github.com/esp32beans/ESP32_Display_Panel_Backlight_Off
 
 Note the ESP_Display_Panel library must be configured to match the ESP32-S3 Box
-(original or -3). See https://github.com/esp-arduino-libs/ESP32_Display_Panel#for-supported-board
-for instructions.
+(original or -3). See ESP_Panel_Board_Supported.h in the same directory as
+ESP32-S3_Touch_USB_Joystick.ino. It is currently configured for the ESP32 S3
+Box 3.
 
-The USB joystick library is from https://github.com/esp32beans/ESP32_flight_stick.
-Download the library as a ZIP file then install it using the Arduino IDE "Add .ZIP Library" option.
+The USB joystick library is from
+https://github.com/esp32beans/ESP32_flight_stick. Download the library as a
+ZIP file then install it using the Arduino IDE "Add .ZIP Library" option.
 
 ## Arduino IDE Build options for ESP32-S3 Box and ESP32-S3 Box 3
 
